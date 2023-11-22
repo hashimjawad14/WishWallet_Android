@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="theme1">#7C4CFF</color>
+    <color name="theme2">#FFFFFF</color>
+    <color name="toggle_btn">#2334A3</color>
+    <color name="button">#0B1AA3</color>
+    <color name="price_text">#FFC107</color>
+    <color name="icon_background_color">#FFE3E3</color>
+    <color name="main_theme">#4D63E4</color>
+    <color name="text_secondary">#8D8989</color>
+    <color name="icon">#767474</color>
+</resources>

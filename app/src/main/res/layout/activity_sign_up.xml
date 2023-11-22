@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sign_Up"
+    android:gravity="center"
+    android:background="@drawable/theme_gradient"
+    android:orientation="vertical"
+    android:weightSum="2.5">
+
+    <LinearLayout
+        android:layout_width="422dp"
+        android:layout_height="114dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.75"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="330dp"
+            android:layout_height="0px"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/wish_logo"/>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="0px"
+            android:layout_margin="15dp"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="1dp">
+
+                    <Button
+                        android:id="@+id/btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:backgroundTint="@color/white"
+                        android:text="Existing Users"
+                        android:textColor="@color/button" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="1dp">
+
+                    <Button
+                        android:id="@+id/new_user_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/button"
+                        android:text="New Users" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1.75"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="516dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            android:gravity="top">
+
+            <View
+                android:id="@+id/white_round"
+                android:layout_width="330dp"
+                android:layout_height="360dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/round_corners">
+
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="360dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/nametb"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:hint="Name"
+                        android:inputType="text"
+                        android:fontFamily="@font/satoshi_regular"
+                        android:textColor="@color/button" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/nametb"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/username_icon"
+                        app:tint="@color/main_theme" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/unametb"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:hint="Username"
+                        android:inputType="text"
+                        android:fontFamily="@font/satoshi_regular"
+                        android:textColor="@color/button" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/unametb"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/username_icon"
+                        app:tint="@color/main_theme" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/emailtb"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:hint="Email"
+                        android:fontFamily="@font/satoshi_regular"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/button" />
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="20dp"
+                        android:layout_alignEnd="@+id/emailtb"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/email_icon"
+                        app:tint="@color/main_theme" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/passwordtb"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:hint="Password"
+                        android:fontFamily="@font/satoshi_regular"
+                        android:inputType="textPassword|text"
+                        android:textColor="@color/button" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/passwordtb"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/lock_icon"
+                        app:tint="@color/main_theme" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/confirm_passwordtb"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:hint="Confirm Password"
+                        android:fontFamily="@font/satoshi_regular"
+                        android:inputType="textPassword|text"
+                        android:textColor="@color/button" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/confirm_passwordtb"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/lock_icon"
+                        app:tint="@color/main_theme" />
+
+                </RelativeLayout>
+
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="300dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginBottom="10dp">-->
+
+<!--                   <Button-->
+<!--                       android:layout_width="120dp"-->
+<!--                       android:layout_height="wrap_content"-->
+<!--                       android:text="Add Image"-->
+<!--                       android:textColor="@color/white"-->
+<!--                       android:backgroundTint="@color/main_theme"/>-->
+
+<!--                </RelativeLayout>-->
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="160dp"
+                android:layout_height="70dp"
+                android:layout_alignBottom="@+id/white_round"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-42dp"
+                android:backgroundTint="@color/button"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

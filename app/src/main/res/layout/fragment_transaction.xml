@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TransactionFragment"
+    android:orientation="vertical">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:weightSum="5"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="0px"-->
+<!--            android:layout_weight="3"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Transactions"-->
+<!--            android:textSize="35sp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:fontFamily="@font/satoshi_black"/>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_width="0px"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1.2"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:padding="10dp"-->
+<!--                android:background="@drawable/blue_circle"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:src="@drawable/baseline_tune_24"-->
+<!--                android:id="@+id/transaction_filter"/>-->
+
+<!--        </LinearLayout>-->
+
+
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded_stroke"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="1dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:backgroundTint="@color/white"
+                android:text="Income"
+                android:textSize="20sp"
+                android:id="@+id/switch_btn"
+                android:textColor="@color/main_theme"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="1dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:backgroundTint="@color/main_theme"
+                android:text="Expenses"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:id="@+id/new_user_btn"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/home_transaction_year"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:text="2023"-->
+<!--                    android:textColor="@color/text_secondary"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:fontFamily="@font/satoshi_black"/>-->
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/year_spinner"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs."
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:id="@+id/currency_sign"
+                        android:layout_marginRight="7dp"
+                        android:fontFamily="@font/satoshi_black"
+                        android:layout_marginTop="1dp"
+                        android:textSize="30sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="1dp"
+                        android:id="@+id/home_transation_total"
+                        android:fontFamily="@font/satoshi_black"
+                        android:textSize="30sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:weightSum="5"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0px"
+                            android:layout_weight="1"
+                            android:text="100000"
+                            android:gravity="center"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"
+                            android:textSize="10sp"
+                            android:id="@+id/range5"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0px"
+                            android:layout_weight="1"
+                            android:text="80000"
+                            android:gravity="center"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"
+                            android:textSize="10sp"
+                            android:id="@+id/range4"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0px"
+                            android:layout_weight="1"
+                            android:text="60000"
+                            android:gravity="center"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"
+                            android:textSize="10sp"
+                            android:id="@+id/range3"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0px"
+                            android:layout_weight="1"
+                            android:text="40000"
+                            android:gravity="center"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"
+                            android:textSize="10sp"
+                            android:id="@+id/range2"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0px"
+                            android:layout_weight="1"
+                            android:text="20000"
+                            android:gravity="center"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"
+                            android:textSize="10sp"
+                            android:id="@+id/range1"/>
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:weightSum="12"
+                        android:gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/jan_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/feb_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="20px"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0px"
+                                android:id="@+id/march_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/april_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/may_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/june_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/july_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/aug_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/sept_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/oct_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/nov_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <View
+                                android:paddingRight="10dp"
+                                android:layout_width="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="0dp"
+                                android:id="@+id/dec_graph"
+                                android:background="@drawable/bar_graph_bg">
+
+                            </View>
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:fontFamily="@font/satoshi_black"
+                        android:textSize="14sp"
+                        android:text="Month"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="horizontal"
+                        android:weightSum="12"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="1"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="2"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="3"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+                        <TextView
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                            android:gravity="center_vertical"
+                        android:text="4"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/satoshi_black"
+                        android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="5"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="6"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="7"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="8"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="9"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="10"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="11"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="12"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/satoshi_black"
+                            android:textStyle="bold"/>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/all_transactions_recycler">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

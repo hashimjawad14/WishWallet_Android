@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".All_Transactions"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0px"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:text="Transactions"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/satoshi_black"/>
+
+
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container">
+
+    </FrameLayout>
+
+</LinearLayout>

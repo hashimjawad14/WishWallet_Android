@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="70dp"
+                android:src="@drawable/hashim"
+                app:civ_border_color="@color/main_theme"
+                app:civ_border_width="2dp" />
+
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="0px"-->
+            <!--                android:layout_height="80dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:id="@+id/profile_img"-->
+            <!--                android:src="@drawable/user_avatar"/>-->
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/satoshi_medium"
+                    android:textSize="18sp"
+                    android:textColor="@color/text_secondary"
+                    android:text="Welcome!"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:text="Hashim"
+                    android:fontFamily="@font/satoshi_black"
+                    android:id="@+id/display_name"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="0.4"
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_menu_24"
+                android:id="@+id/menu_icon_home"/>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:background="@drawable/balance_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Balance"
+                android:fontFamily="@font/satoshi_medium"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs."
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:id="@+id/currency_sign"
+                    android:layout_marginRight="7dp"
+                    android:fontFamily="@font/satoshi_black"
+                    android:layout_marginTop="1dp"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5000"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="1dp"
+                    android:id="@+id/Total_Balance"
+                    android:fontFamily="@font/satoshi_black"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/round_bg"
+                android:layout_margin="12dp"
+                android:id="@+id/income_section"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginRight="2dp"
+                    android:src="@drawable/baseline_arrow_downward_24"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Income"
+                        android:layout_marginBottom="1dp"
+                        android:textColor="@color/main_theme"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/satoshi_medium"
+                        android:textSize="12sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs."
+                            android:textColor="@color/main_theme"
+                            android:textStyle="bold"
+                            android:id="@+id/currency_sign2"
+                            android:fontFamily="@font/satoshi_medium"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="1dp"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10000"
+                            android:textColor="@color/main_theme"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/satoshi_medium"
+                            android:layout_marginTop="1dp"
+                            android:id="@+id/total_income"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/round_bg"
+                android:layout_margin="12dp"
+                android:id="@+id/expense_section"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginRight="2dp"
+                    android:src="@drawable/baseline_arrow_upward_24"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expenses"
+                        android:fontFamily="@font/satoshi_medium"
+                        android:layout_marginBottom="1dp"
+                        android:textColor="@color/main_theme"
+                        android:textStyle="bold"
+                        android:textSize="12sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs."
+                            android:textColor="@color/main_theme"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/satoshi_medium"
+                            android:id="@+id/currency_sign3"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="1dp"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5000"
+                            android:textColor="@color/main_theme"
+                            android:textStyle="bold"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/satoshi_medium"
+                            android:id="@+id/total_expenses"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Recent Transactions"
+            android:textSize="20sp"
+            android:fontFamily="@font/satoshi_medium"
+            android:textStyle="bold"
+            android:paddingLeft="15dp"/>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="View All"
+            android:id="@+id/all_transactions"
+            android:textSize="17sp"
+            android:gravity="right"
+            android:paddingRight="25dp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="@font/satoshi_medium"
+            android:textStyle="bold"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recent_transactions_recycler">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>
